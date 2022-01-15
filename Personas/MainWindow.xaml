@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Personas"
         mc:Ignorable="d"
-        Title="Personas " Height="450" Width="800">
-    <Grid>
+        Title="Personas " Height="450" Width="800" MaxHeight="450" MaxWidth="800">
+
+    <Window.Resources>
+        <Style x:Key="EstiloBotones" TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Height" Value="20" />
+            <Setter Property="Margin" Value="20,10,10,0" />
+        </Style>
+    </Window.Resources>
+    
+    
+    <DockPanel>
+        <!-- Contenedor con los botones -->
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+            <Button Content="Nueva Persona" Style="{StaticResource EstiloBotones}" Command="{Binding Path=AbrirNuevaPersonaCommand}" />
+            <Button Content="Lista de Personas" Style="{StaticResource EstiloBotones}" Command="{Binding Path=AbrirListaPersonasCommand}" />
+        </StackPanel>
+
+        <!-- Contenedor donde aparecerá la pestaña actual-->
+        <Border BorderBrush="Black" BorderThickness="3" Margin="10">
+            <ContentControl Content="{Binding Path=PestañaActual}" />
+        </Border>
         
-    </Grid>
+    </DockPanel>
 </Window>

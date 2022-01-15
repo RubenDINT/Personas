@@ -1,5 +1,4 @@
-﻿using Personas.vms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,28 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Personas
+namespace Personas.contentcontrols
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para NuevaPersonaControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class NuevaPersonaControl : UserControl
     {
-        private MainWindowVM vm = new MainWindowVM();
-        public MainWindow()
+        public NuevaPersonaControl()
         {
             InitializeComponent();
-            DataContext = vm;
-        }
-
-        private void NuevaPersonaButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ListaPersonasButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
