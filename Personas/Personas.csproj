@@ -90,7 +90,10 @@
     <Compile Include="vistas\AñadirDialog.xaml.cs">
       <DependentUpon>AñadirDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="vms\AñadirDialogoVM.cs" />
+    <Compile Include="vms\ListaPersonasVM.cs" />
     <Compile Include="vms\MainWindowVM.cs" />
+    <Compile Include="vms\NuevaPersonaVM.cs" />
     <Page Include="contentcontrols\ListaPersonasControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

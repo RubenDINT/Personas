@@ -11,13 +11,14 @@ namespace Personas.servicios
 {
     class ServicioNavegacion
     {
+        public ListaPersonasControl listaPersonas = new ListaPersonasControl();
         public ServicioNavegacion() {; }
 
         // Devuelve un nuevo UserControl de NuevaPersona
         internal UserControl AbrirNuevaPersona() => new NuevaPersonaControl();
 
         // Devuelve un nuevo UserControl de ListaPersonas
-        internal UserControl AbrirListaPersonas() => new ListaPersonasControl();
+        internal UserControl AbrirListaPersonas() => listaPersonas;
 
         // Abre un diálogo y devuelve el resultado
         public bool? AbrirAñadirDialog() => new AñadirDialog().ShowDialog();
