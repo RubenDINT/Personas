@@ -15,7 +15,7 @@
             <TextBlock Text="Nacionalidad" />
             <StackPanel Orientation="Horizontal">
                 <ComboBox Width="150" ItemsSource="{Binding Path=ListaNacionalidades}" />
-                <Button Content="+"  Width="30"/>
+                <Button Content="+"  Width="30" Command="{Binding Path=AbrirAñadirDialogCommand}"/>
             </StackPanel>
             <Button Content="Aceptar" HorizontalAlignment="Center"  Width="100"/>
         </StackPanel>

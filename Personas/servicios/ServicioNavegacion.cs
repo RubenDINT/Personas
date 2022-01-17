@@ -1,4 +1,5 @@
 ﻿using Personas.contentcontrols;
+using Personas.vistas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +13,14 @@ namespace Personas.servicios
     {
         public ServicioNavegacion() {; }
 
-        internal UserControl AbrirNuevaPersona()
-        {
-            return new NuevaPersonaControl();
-        }
+        // Devuelve un nuevo UserControl de NuevaPersona
+        internal UserControl AbrirNuevaPersona() => new NuevaPersonaControl();
 
-        internal UserControl AbrirListaPersonas()
-        {
-            return new ListaPersonasControl();
-        }
+        // Devuelve un nuevo UserControl de ListaPersonas
+        internal UserControl AbrirListaPersonas() => new ListaPersonasControl();
+
+        // Abre un diálogo y devuelve el resultado
+        public bool? AbrirAñadirDialog() => new AñadirDialog().ShowDialog();
+        
     }
 }

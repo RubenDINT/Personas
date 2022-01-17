@@ -17,10 +17,11 @@ namespace Personas.vms
         ServicioNavegacion servicioNavegacion = new ServicioNavegacion();
         
         private UserControl pestañaActual;
+
         // Comandos
         public RelayCommand AbrirListaPersonasCommand { get; }
         public RelayCommand AbrirNuevaPersonaCommand { get; }
-
+        public RelayCommand AbrirAñadirDialogCommand { get; set; }
         // Propiedad donde se guardan los objetos de Persona
         private ObservableCollection<Persona> listaPersonas;
 
@@ -51,6 +52,7 @@ namespace Personas.vms
             // Instacia de los comandos pasando por parámetro los métodos que abren las pestañas
             AbrirListaPersonasCommand = new RelayCommand(AbrirListaPersonas);
             AbrirNuevaPersonaCommand = new RelayCommand(AbrirNuevaPersona);
+            AbrirAñadirDialogCommand = new RelayCommand(AbrirAñadirDialog);
             // Instancia vacía para que al iniciar el programa no aparezca ningún UserControl seleccionado
             PestañaActual = new UserControl();
             
@@ -66,6 +68,11 @@ namespace Personas.vms
         private void AbrirListaPersonas()
         {
             PestañaActual = servicioNavegacion.AbrirListaPersonas();
+        }
+
+        private void AbrirAñadirDialog()
+        {
+            servicioNavegacion.AbrirAñadirDialog();
         }
     }
 }
