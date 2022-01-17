@@ -11,8 +11,8 @@ namespace Personas.servicios
 {
     class ServicioNavegacion
     {
-        public ListaPersonasControl listaPersonas = new ListaPersonasControl();
-        public ServicioNavegacion() {; }
+        public ListaPersonasControl listaPersonas { get; set; }
+        public ServicioNavegacion() { }
 
         // Devuelve un nuevo UserControl de NuevaPersona
         internal UserControl AbrirNuevaPersona() => new NuevaPersonaControl();
